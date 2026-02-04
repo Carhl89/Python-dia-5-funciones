@@ -1,12 +1,7 @@
-from modelo import (
-    cargar_alumnos,
-    guardar_alumno,
-    agregar_alumno,
-    eliminar_alumno
-)
+from modelo import *
 
 
-alumnos = cargar_alumnos()
+alumnos = cargar_alumno()
 
 
 while True:
@@ -29,8 +24,7 @@ while True:
         guardar_alumno(alumnos)
     elif opcion == "3":
         for alumno in alumnos:
-            print(alumno[0])
+            print(alumno, type(alumno))
     elif opcion =="4":
         break
     
-        

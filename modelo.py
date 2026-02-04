@@ -1,18 +1,18 @@
 import csv
 
-def agregar_alumno(lista, nombre):
-    lista.append(nombre)
+def agregar_alumno(alumnos, nombre):
+    alumnos.append(nombre)
 
-def mostrar_alumno(lista):
-    for alumno in lista:
+def mostrar_alumno(alumnos):
+    for alumno in alumnos:
         print(alumno)
 
-def cantidad_alumnos(lista):
-    return len(lista)
+def cantidad_alumno(alumnos):
+    return len(alumnos)
 
-def eliminar_alumno(lista, nombre):
-    if nombre in lista:
-        lista.remove(nombre)
+def eliminar_alumno(alumnos, nombre):
+    if nombre in alumnos:
+        alumnos.remove(nombre)
         print("Alumno eliminado")
     else:
         print("No existe ese alumno")
@@ -21,25 +21,23 @@ def eliminar_alumno(lista, nombre):
 
 ARCHIVO = "datos.csv"
 
-def guardar_alumno(lista):
+def guardar_alumno(alumnos):
     with open(ARCHIVO, "w", newline="",encoding="utf-8") as f:
-       for alumno in lista:
+       for alumno in alumnos:
            f.write(alumno + "\n")
            
-def cargar_alumnos():
+def cargar_alumno():
     try:
         with open(ARCHIVO, "r", encoding="utf-8") as f:
-            reader = csv.reader(f)
             return [linea.strip() for linea in f]
-    
     except FileNotFoundError:
         return []
 
-def agregar_alumno(lista, nombre):
-    lista.append([nombre])
+def agregar_alumno(alumnos, nombre):
+    alumnos.append(nombre)
     
-def aliminar_alumno(lista, nombre):
-    for alumno in lista:
-        if alumno[0] == nombre:
-            lista.remove(alumno)
+def aliminar_alumno(alumnos, nombre):
+    for alumno in alumnos:
+        if alumno == nombre:
+            alumnos.remove(alumno)
             break
