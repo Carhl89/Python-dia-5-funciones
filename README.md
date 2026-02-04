@@ -9,7 +9,9 @@ Proyecto creado como practica para aprender programacion, Git y desarrollo profe
 * Agregar alumnos
 * Eliminar alumnos
 * Listar alumnos
-* Codigo modularizado
+* Guardado automatico en csv
+* Carga automatica al iniciar
+* Codigo modularizado (modelo / main)
 
 ---
 
@@ -18,6 +20,7 @@ Proyecto creado como practica para aprender programacion, Git y desarrollo profe
 * Python 3
 * Git
 * Github
+* CSV
 
 ---
 
@@ -25,3 +28,15 @@ Proyecto creado como practica para aprender programacion, Git y desarrollo profe
 ´´´ bash
 python main.py
 
+---
+## Proximas mejoras
+
+* [] Interfaz grafica (Tkinter)
+* [] Marcar asistencia
+* [] Fechas
+* [] Exportar reporte
+* [] Buscar alumnos
+
+
+   Autor
+Carlos Acosta
