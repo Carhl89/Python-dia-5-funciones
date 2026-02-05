@@ -1,7 +1,7 @@
 from modelo import *
 
 
-alumnos = cargar_alumno()
+alumnos = cargar_alumnos()
 
 
 while True:
@@ -9,22 +9,37 @@ while True:
     print("1. Agregar alumno")
     print("2. Eliminar alumno")
     print("3. Listar alumno")
-    print("4. Salir")
+    print("4. Marcar presente")
+    print("5. Marcar ausente")
+    print("6. Salir")
     
     opcion =input("Opcion: ")
     
     if opcion == "1":
         nombre = input("Nombre: ")
-        agregar_alumno(alumnos, nombre)
-        guardar_alumno(alumnos)
+        alumnos = agregar_alumno(alumnos, nombre)
+        guardar_alumnos(alumnos)
         
     elif opcion =="2":
         nombre = input("Nombre a eliminar: ")
-        eliminar_alumno(alumnos, nombre)
-        guardar_alumno(alumnos)
+        alumnos = eliminar_alumno(alumnos, nombre)
+        guardar_alumnos(alumnos)
+        
     elif opcion == "3":
-        for alumno in alumnos:
-            print(alumno, type(alumno))
+        for nombre, estado in alumnos:
+            estado_txt ="Presente" if estado == "P" else "Ausente"
+            print(nombre, "-", estado_txt)
+            
+            
     elif opcion =="4":
-        break
+        nombre = input("Nombre: ")
+        marcar_asistencia(alumnos, nombre, "P")
+        guardar_alumnos(alumnos)
     
+    elif opcion == "5":
+        nombre = input("Nombre: ")
+        marcar_asistencia(alumnos, nombre, "A")
+        guardar_alumnos(alumnos)
+    
+    elif opcion == "6":
+        break

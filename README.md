@@ -11,7 +11,7 @@ Proyecto creado como practica para aprender programacion, Git y desarrollo profe
 * Listar alumnos
 * Guardado automatico en csv
 * Carga automatica al iniciar
-* Codigo modularizado (modelo / main)
+* Codigo modularizado (modelo / main/vista)
 
 ---
 
@@ -21,6 +21,7 @@ Proyecto creado como practica para aprender programacion, Git y desarrollo profe
 * Git
 * Github
 * CSV
+* interfaz grafica Tkinter
 
 ---
 
@@ -31,7 +32,6 @@ python main.py
 ---
 ## Proximas mejoras
 
-* [] Interfaz grafica (Tkinter)
 * [] Marcar asistencia
 * [] Fechas
 * [] Exportar reporte
