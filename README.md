@@ -15,7 +15,7 @@ Proyecto creado como practica para aprender programacion, Git y desarrollo profe
 
 ---
 
-## Tegnologias usadas
+## Tecnologias usadas
 
 * Python 3
 * Git
